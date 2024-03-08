@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlatCW" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHh-fo-SNu">
+                                <rect key="frame" x="122.5" y="101.5" width="75" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rkI-MV-Cot" userLabel="Stack View T">
+                                <rect key="frame" x="20" y="20" width="280" height="61.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="STj-TB-uhC" userLabel="Stack View TL">
+                                        <rect key="frame" x="0.0" y="0.0" width="142" height="61.5"/>
+                                        <subviews>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="5" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="fkT-Mj-4SV">
+                                                <rect key="frame" x="-2" y="0.0" width="146" height="32"/>
+                                                <connections>
+                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="v2m-7c-Tf8"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed WPM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vN0-zX-DBW">
+                                                <rect key="frame" x="0.0" y="41" width="94.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="fkT-Mj-4SV" secondAttribute="trailing" id="c4l-II-DoN"/>
+                                            <constraint firstItem="fkT-Mj-4SV" firstAttribute="leading" secondItem="STj-TB-uhC" secondAttribute="leading" id="llr-el-6H8"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Iah-Oc-hyS" userLabel="Stack View TC">
+                                        <rect key="frame" x="162" y="0.0" width="49" height="61.5"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SvK-9O-WU6">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="switchInverseChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="yv9-c8-eL3"/>
+                                                </connections>
+                                            </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rev" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkP-eq-VXi">
+                                                <rect key="frame" x="0.0" y="41" width="28.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="SvK-9O-WU6" firstAttribute="leading" secondItem="Iah-Oc-hyS" secondAttribute="leading" id="cZp-xA-K24"/>
+                                            <constraint firstAttribute="trailing" secondItem="SvK-9O-WU6" secondAttribute="trailing" id="gtM-4Q-POZ"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="928-26-6Bb" userLabel="Stack View TR">
+                                        <rect key="frame" x="231" y="0.0" width="49" height="61.5"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zOR-31-O4E" userLabel="Switch Torch">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="switchTorchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="fAk-5W-Ymu"/>
+                                                </connections>
+                                            </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Torch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eS9-f6-e7q">
+                                                <rect key="frame" x="0.0" y="41" width="43.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="zOR-31-O4E" secondAttribute="trailing" id="W3Z-54-d4i"/>
+                                            <constraint firstItem="zOR-31-O4E" firstAttribute="leading" secondItem="928-26-6Bb" secondAttribute="leading" id="iYa-lE-dV0"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6w-cU-981">
+                                <rect key="frame" x="157.5" y="142" width="5" height="406"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="5" id="Svb-sP-l9g"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mHh-fo-SNu" firstAttribute="top" secondItem="rkI-MV-Cot" secondAttribute="bottom" constant="20" id="1B1-2P-Nsf"/>
+                            <constraint firstItem="rkI-MV-Cot" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="3J9-y7-uck"/>
+                            <constraint firstItem="mHh-fo-SNu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AOV-Nt-HXk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rkI-MV-Cot" secondAttribute="trailing" constant="20" id="W1K-RY-Co7"/>
+                            <constraint firstItem="i6w-cU-981" firstAttribute="top" secondItem="mHh-fo-SNu" secondAttribute="bottom" constant="20" id="XbG-Z3-AxF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="i6w-cU-981" secondAttribute="bottom" constant="20" id="jCy-7c-Lab"/>
+                            <constraint firstItem="rkI-MV-Cot" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nww-yc-lIj"/>
+                            <constraint firstItem="i6w-cU-981" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r7l-h0-RxN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="keyerDirection" destination="mHh-fo-SNu" id="WEB-Mf-Rxk"/>
+                        <outlet property="keyerSpeed" destination="vN0-zX-DBW" id="zrX-8E-6YH"/>
+                        <outlet property="sliderSpeed" destination="fkT-Mj-4SV" id="FDk-M7-LM6"/>
+                        <outlet property="switchInverse" destination="SvK-9O-WU6" id="ObF-rb-86g"/>
+                        <outlet property="switchTorch" destination="zOR-31-O4E" id="e8P-IO-ZKy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.875" y="92.957746478873247"/>
+        </scene>
+    </scenes>
+</document>
